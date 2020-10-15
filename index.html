@@ -33,7 +33,7 @@
             templateUrl: "paris.htm",
             controller: "parisCtrl",
           });
-        $locationProvider.html5Mode(true);
+        $locationProvider.hashPrefix('');
       });
       app.controller("londonCtrl", function ($scope) {
         $scope.msg = "I love London";
