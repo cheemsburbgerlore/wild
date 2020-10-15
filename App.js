@@ -12,7 +12,7 @@ const app = angular.module("myApp", ["ngRoute"]);
               
             })
             .when("/stats", {
-              templateUrl: "templates/stats.html",
+              templateUrl: "stats.html",
               
             });
         //   $locationProvider.html5Mode(true);
