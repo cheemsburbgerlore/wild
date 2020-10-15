@@ -25,7 +25,34 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-
+<script>
+    const app = angular.module("myApp", ["ngRoute"]);
+      app.config([
+        "$routeProvider",
+        "$locationProvider",
+        function ($routeProvider, $locationProvider) {
+          $routeProvider
+            .when("/", {
+              templateUrl: "index.html",
+            })
+            .when("/tourism", {
+              templateUrl: "templates/tourism.html",
+              
+            })
+            .when("/stats", {
+              templateUrl: "stats.html",
+              
+            });
+        //   $locationProvider.html5Mode(true);
+        },
+      ]);
+      // app.controller("londonCtrl", function ($scope) {
+      //   $scope.msg = "I love London";
+      // });
+      // app.controller("parisCtrl", function ($scope) {
+      //   $scope.msg = "I love Paris";
+      // });
+    </script>
   <body ng-app="myApp">
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark primary-color">
@@ -115,33 +142,6 @@
     </p>
 
     <div ng-view></div>
-    <script>
-    const app = angular.module("myApp", ["ngRoute"]);
-      app.config([
-        "$routeProvider",
-        "$locationProvider",
-        function ($routeProvider, $locationProvider) {
-          $routeProvider
-            .when("/", {
-              templateUrl: "index.html",
-            })
-            .when("/tourism", {
-              templateUrl: "templates/tourism.html",
-              
-            })
-            .when("/stats", {
-              templateUrl: "stats.html",
-              
-            });
-        //   $locationProvider.html5Mode(true);
-        },
-      ]);
-      // app.controller("londonCtrl", function ($scope) {
-      //   $scope.msg = "I love London";
-      // });
-      // app.controller("parisCtrl", function ($scope) {
-      //   $scope.msg = "I love Paris";
-      // });
-    </script>
+    
   </body>
 </html>
