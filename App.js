@@ -4,9 +4,6 @@ const app = angular.module("myApp", ["ngRoute"]);
         "$locationProvider",
         function ($routeProvider, $locationProvider) {
           $routeProvider
-            .when("/", {
-              templateUrl: "index.html",
-            })
             .when("/tourism", {
               templateUrl: "templates/tourism.html",
               
