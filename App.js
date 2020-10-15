@@ -10,6 +10,12 @@ const app = angular.module("myApp", ["ngRoute"]);
             })
             .when("/stats", {
               templateUrl: "stats.html",
+                
+              
+            })
+              .when("/species/normal", {
+              templateUrl: "templates/tourism.html",
+                
               
             });
         //   $locationProvider.html5Mode(true);
